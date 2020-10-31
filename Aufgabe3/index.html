@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+               initial-scale=1,
+               minimum-scale=1">
+    <title>THE BOILING POT</title>
+    <link rel="stylesheet" type="text/css" href="style/hogwarts.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>THE BOILING POT</h1>
+        <p>a magic place to create magic things</p>
+    </header>
+    <main>
+        <fieldset>
+            <legend>NAME YOUR SPOOKY ELIXIR</legend>
+            <textarea id="Name" name="NAME YOUR SPOOKY ELIXIR" form="usrform" value="1">introduce the name here</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>DESCRIPTION OF THIS MAGIC POTION</legend>
+            <textarea id="nebenwirkung" name="DESCRIPTION" form="usrform">write it here</textarea>
+        </fieldset>
+        <fieldset id="eissorten">
+            <legend> INGREDIENTS </legend>
+            <p>Price pro ingredient: 1€</p>
+            <label for="schwarzeVanille">Cat Nails</label>
+            <input type="number" name="anzahlKugeln" value="0" id="schwarzeVanille" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="sesamDattel">Unicorn Eyes</label>
+            <input type="number" name="anzahlKugeln" value="0" id="sesamDattel" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="waldmeister">Mermaid Hair</label>
+            <input type="number" name="anzahlKugeln" value="0" id="waldmeister" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="orangeZartbitter">Elf Ear</label>
+            <input type="number" name="anzahlKugeln" value="0" id="orangeZartbitter" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="minzeSchoko">Snake Poison</label>
+            <input type="number" name="anzahlKugeln" value="0" id="minzeSchoko" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="latteMacchiato">Octopus tentacles</label>
+            <input type="number" name="anzahlKugeln" value="0" id="latteMacchiato" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <label for="granatapfel">Centaurus Horn</label>
+            <input type="number" name="anzahlKugeln" value="0" id="granatapfel" step="1" min="0" max="10" value="0" data-preis="1"/>
+            <br>
+            <h4>Temperature</h4>
+            <p> <input type="radio" name="temperature" id="cook" value="cook" checked />
+            <label for="cook">Cook</label>
+            
+            <span id="gradrange">
+                10°C
+                <input type="range" name="temperature" id="degree" min="5" max="100" step="10" value="10">
+                100°C
+                <p> <input type="radio" name="temperature" id="cook" value="cook" checked />
+                <label for="cook">No Cook</label>
+            </p>
+            </span>
+            </span>
+
+            <h4>Time of cook</h4>
+            <span>
+            <span id="potion">
+            1 Min
+            <input type="range" name="duration" id="Duration" min="1" max="60" step="10" value="10">
+            60 Min
+            </span>
+        </span>
+
+            <h4>Consistency</h4>
+            <select name="Consistency" id="consistency">
+                <option value="liquid">liquid</option>
+                <option value="stonehard">stone hard</option>
+                <option value="sticky">sticky</option>
+                <option value="chewy">chewy</option>
+            </select>
+            <h4>Farbe</h4>
+            <select name="color" id="color">
+                <option value="pink">pink</option>
+                <option value="purple">purple</option>
+                <option value="green">green</option>
+            </select>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>EFFECT</legend>
+            <select name="Wirkung" id="Wirkung">
+                <option value="love">Love</option>
+                <option value="fly">Fly</option>
+                <option value="invisibility">Invisibility</option>
+                <option value="strenght">Strenght</option>
+                <option value="swim">Swim</option>
+            </select>
+            <legend>Duration</legend>
+            <span id="time">
+                <span>
+                    1 min
+                    <input type="range" name="dauer" id="dauer" min="1" max="60" step="1" value="1">
+                    60min
+                </span>
+            </span>
+        </fieldset>
+     
+        <fieldset id="lieferoptionen">
+            <legend>DELIVERY OPTIONS</legend>
+            <p>Name, Vorname</p>
+            <input type="text" name="name" placeholder="Name, Vorname" required />
+            <hr />
+            <p>Adresse</p>
+            <input type="text" name="adresse" placeholder="Adresse" required />
+            <hr />
+            <p>House Nr.</p>
+            <input type="text" name="hausnummer" pattern="[0-9]{1-3}" placeholder="Hausnummer" required />
+            <hr />
+            <p>City</p>
+            <input type="text" name="adresse" placeholder="Ort" required />
+            <hr />
+            <p>E-Mail</p>
+            <input type="email" name="mail" placeholder="max@mustermann.com" required/>
+            <hr />
+            <p>Telefone Nr.</p>
+            <input type="text" name="telefonnummer" pattern="[0-9]{12}" placeholder="01576 3522937" />
+            <hr />
+            <p>Paying Option</p>
+            <select name="bezahlung" id="bezahlung">
+                <option value="bar">cash</option>
+                <option value="rechnung">VISA</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <br>
+            <br>
+            <button id="button">ORDER</button>
+        </fieldset>
+        <fieldset id="bestellübersicht">
+            <p>Cart: <span id="preis-total">0</span> €</p>
+
+            <p>Your order:</p>
+            <p id="zusammenfassung"></p>
+            <hr />
+        </fieldset>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
