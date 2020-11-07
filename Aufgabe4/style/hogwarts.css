@@ -1,0 +1,38 @@
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+
+}
+
+header,footer{
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    
+}
+main{
+    color: rgb(221, 64, 124);
+}
+fieldset{
+    width: 500px;
+    background-color: rgba(8, 61, 75, 0.747);
+
+    
+}
+
+legend{font-size: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+#eissorten label{
+    width: 130px;
+    display: inline-block
+}
+input{
+    background-color: white;
+}
+input.validated:invalid{
+background-color: #ff0000;
+}
